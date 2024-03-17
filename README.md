@@ -91,43 +91,18 @@ for i in txt :
     lst.append(sum)
 
 cnt = 0
+state = 1
+get = []
 for i in range(0,len(lst)) :
     if (cnt) :
         break
     if (lst[i]*2 in lst) :
-        print(txt[0:i+1])
-        cnt = 1
-#time coplexity :O(n)
-"""
-    ข้อนี้ยากหน่อยต้องใช้ ascii
-    url :https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/2560px-ASCII-Table-wide.svg.png
-
-    input = "abcababcababcab"
-
-    อย่างแรกเราลองคิดก่อนเราจะหา string ซ้ำไงดีนะ ซึ่ง เราก็คิดเออว่ะ ถ้าเราจะห้าม sub string ที่มันจะซ้ำกันผลบวกของ sub string แต่ละก้อนจะเป็นพหุคูณกัน
-
-    Example : ABCABCABC
-    จำแนกได้ว่า --> ABC ABC ABC
-    แปลงเป็น ascii : A  B  C  | A  B  C  | A  B  C
-                    65 66 67   65 66 67   65 66 67
-                    65+66+67   65+66+67   65+66+67
-                      198    +   198    +   198
-
-                    = 594
-
-    เราก็เอ๊ะผลบวกแต่ะก้อนมันเท่ากันนี้ --> เราก็ฉุดคิดได้ว่า เราก็แค่ตัวอักษรเป็น ascii แล้วหาผลบวกตัวที่ 0 ถึง n จากนั้น เราก็ดูว่ามันมีพหุคูณผลบวกใดๆ ไหมพูดงี้อาจจะไม่เห็นภาพ เดียวเราพาบวก
-            0  1  2    3  4  5    6  7  8
-            A  B  C  | A  B  C  | A  B  C
-
-    ได้ว่า : sum[0] = 65 A
-           sum[1] = 65 + 66 = 131 AB
-           sum[2] = 65 + 66 + 67 = 198 ABC --> 198
-           sum[3] = 65 + 66 + 67 + 65 = 263 ABCA
-           sum[4] = 65 + 66 + 67 + 65 + 66 = 329 ABCAB
-           sum[5] = 65 + 66 + 67 + 65 + 66 + 67 = 396 ABCABA --> 396
-
-    เราจะเห็นได้ว่า แต่ละชุดที่มันครบชุดมันจะมีค่าของมัน แล้วถ้ามีพหุคูณของชุดนั้นๆ แปลว่า มีชุดนั้นๆ ซ้ำยังไงหล่ะ
-"""
+        get.append(txt[0:i+1])
+        state = 0
+if (state) :
+    print(-1)
+else :
+    print(get[len(get)-1])
 ```
 # Solution-5
 ```
