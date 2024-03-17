@@ -1,6 +1,6 @@
 # solution-ai-builder
 solution for ai builder
-google colab for 5 , 9 ,11 : [link]https://colab.research.google.com/drive/1BUVAevWMlrIrqhcGPMm4QTrchJMRtG-G#scrollTo=PholPew2EjfO
+google colab for 5 , 9 ,11 : [โค้ดสำหรับดูใน google colab ครับ](https://colab.research.google.com/drive/1BUVAevWMlrIrqhcGPMm4QTrchJMRtG-G#scrollTo=PholPew2EjfO)
 
 # Solution-1
 ```
